@@ -1,0 +1,10 @@
+.login-area {
+  height: 100vh;
+  background-color: rgba(112, 128, 144, 0.233);
+}
+.login-card {
+    background-color: white;
+    width: 24rem;
+    height: 12rem;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.11);
+}
