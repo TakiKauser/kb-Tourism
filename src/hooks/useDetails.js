@@ -8,7 +8,7 @@ const useDetails = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/events/${eventId}`)
+        fetch(`https://intense-springs-45537.herokuapp.com/events/${eventId}`)
             .then(response => response.json())
             .then(jsonData => setItem(jsonData))
     }, [])
