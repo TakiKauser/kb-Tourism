@@ -19,7 +19,7 @@ const EventDetails = () => {
     return (
         <div className="details-card cart">
             <h3>{item?.title}</h3>
-            <p>{item?.tourist}</p>
+            <p>{item?.description}</p>
             <hr />
             <img src={item?.image} alt="event-spot" className="img-fluid" />
         </div >
