@@ -25,8 +25,8 @@ const Event = (props) => {
                                 <span className='m-2'>{location}</span></li>
                         </ul>
                     </Card.Body>
-                    <NavLink to={`/details/event/${_id}`} style={{ "textDecoration": "none" }}>
-                        <button className="p-2 d-block w-100 btn-dark">Check Details for Booking</button>
+                    <NavLink to={`/event/booking/${_id}`} style={{ "textDecoration": "none" }}>
+                        <button className="p-2 rounded btn-secondary">Book this Event</button>
                     </NavLink>
                 </Card>
             </Col>
