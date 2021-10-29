@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Events from './components/Events/Events';
+import EventDetails from './components/EventDetails/EventDetails';
 import HomePage from './components/Home/HomePage/HomePage';
 import NotFound from './components/NotFound/NotFound';
+import EventsPage from './components/Pages/Events/EventsPage';
 import Login from './components/UserAuth/Login/Login';
 import PrivateRoute from './components/UserAuth/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
@@ -17,10 +18,13 @@ function App() {
               <HomePage></HomePage>
             </Route>
             <Route exact path='/home'>
-            <HomePage></HomePage>
+              <HomePage></HomePage>
             </Route>
             <PrivateRoute exact path='/events'>
-              <Events></Events>
+              <EventsPage></EventsPage>
+            </PrivateRoute>
+            <PrivateRoute exact path='/details/event/:eventId'>
+              <EventDetails></EventDetails>
             </PrivateRoute>
             <Route exact path='/login'>
               <Login></Login>

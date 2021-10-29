@@ -1,7 +1,10 @@
+import { faCheck, faPlusSquare, faSignOutAlt, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+// import { NavHashLink } from 'react-router-hash-link';
 import './Menubar.css';
 
 const Menubar = () => {
@@ -37,11 +40,23 @@ const Menubar = () => {
                             user?.email && <img src={user?.photoURL} alt="profile" width="50" height="50" className='dp-img me-3' />
                         }
                         <Navbar.Text>
-                            <a href="#login" className='user-name'>{user?.displayName} </a>
+                            {/* <a href="/" className='user-name'>{user?.displayName}</a> */}
+                            <NavLink to="/" className="login-menu-link">{user?.displayName}</NavLink>
                         </Navbar.Text>
                         {
                             user?.email ?
-                                <Button variant='secondary' onClick={logOut}>Sign Out</Button>
+                                <NavDropdown
+                                    id="nav-dropdown-light-example"
+                                    title="Profile"
+                                    menuVariant="light"
+                                >
+                                    <NavDropdown.Item href="#action/3.1"><FontAwesomeIcon icon={faCheck} />  My Bookings</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2"><FontAwesomeIcon icon={faTasks} />  Manage Bookings</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3"><FontAwesomeIcon icon={faPlusSquare} />  Add an Event</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item onClick={logOut}><FontAwesomeIcon icon={faSignOutAlt} />  Sign Out</NavDropdown.Item>
+                                </NavDropdown>
+                                // <Button variant='secondary' onClick={logOut}><FontAwesomeIcon icon={faSignOutAlt} />  Sign Out</Button>
                                 :
                                 <Navbar.Text>
                                     <NavLink to="/login" className="login-menu-link">Sign In</NavLink>

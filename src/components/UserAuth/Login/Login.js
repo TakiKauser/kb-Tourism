@@ -11,7 +11,7 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || "/";
-    console.log(location?.state?.from);
+    // console.log(location?.state?.from);
 
     const handleGoogleLogIn = () => {
         signInUsingGoogle()
@@ -22,9 +22,9 @@ const Login = () => {
     }
     return (
         <div className='login-area d-flex justify-content-center align-items-center flex-column'>
-            <div className='login-card p-2'>
+            <div className='p-2 login-card'>
                 <h2 className='text-secondary'>Sign In</h2>
-                <button className='btn-light p-2 mt-5' onClick={handleGoogleLogIn}><FontAwesomeIcon icon={faGoogle} />  Continue with Google</button>
+                <button className='p-2 mt-5 btn-light' onClick={handleGoogleLogIn}><FontAwesomeIcon icon={faGoogle} />  Continue with Google</button>
             </div>
         </div>
     );

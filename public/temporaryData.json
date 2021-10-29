@@ -1,0 +1,74 @@
+[
+    {
+        "key":1,
+        "title":"Discover Depth of Beach",
+        "spot":"The Bahamas",
+        "category":"Natural",
+        "image":"https://i.ibb.co/1MnFzgF/tourism-event-001.jpg",
+        "duration":6,
+        "cost":200,
+        "tourists":13,
+        "location":"Maldives",
+        "continent":"Asia"
+    },
+    {
+        "key":2,
+        "title":"Red City Land",
+        "spot":"Islands",
+        "category":"Natural",
+        "image":"https://i.ibb.co/7n15sZk/tourism-event-002.jpg",
+        "duration":5,
+        "cost":700,
+        "tourists":17,
+        "location":"Islands",
+        "continent":"Europe"
+    },
+    {
+        "key":3,
+        "title":"Trip for Relaxation",
+        "spot":"Muai",
+        "category":"Natural",
+        "image":"https://i.ibb.co/4dhgPMf/tourism-event-003.jpg",
+        "duration":4,
+        "cost":500,
+        "tourists":39,
+        "location":"Singapur",
+        "continent":"Asia"
+    },
+    {
+        "key":4,
+        "title":"Let's Lost Nowhere",
+        "spot":"Brussels",
+        "category":"Natural",
+        "image":"https://i.ibb.co/8BPgwJh/tourism-event-004.jpg",
+        "duration":7,
+        "cost":400,
+        "tourists":12,
+        "location":"Brazil",
+        "continent":"South America"
+    },
+    {
+        "key":5,
+        "title":"Magic of Italy Tours",
+        "spot":"Verrona",
+        "category":"Natural",
+        "image":"https://i.ibb.co/7YGYZfL/tourism-event-005.jpg",
+        "duration":4,
+        "cost":300,
+        "tourists":21,
+        "location":"Italy",
+        "continent":"Europe"
+    },
+    {
+        "key":6,
+        "title":"The Dark Forest Adventure",
+        "spot":"Marrakech",
+        "category":"Natural",
+        "image":"https://i.ibb.co/hyffpM3/tourism-event-006.jpg",
+        "duration":8,
+        "cost":900,
+        "tourists":27,
+        "location":"Thailand",
+        "continent":"Asia"
+    }
+]
