@@ -5,7 +5,7 @@ import { Card, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const Event = (props) => {
-    const { key, image, title, cost, duration, tourists, location } = props.event;
+    const { _id, image, title, cost, duration, tourists, location, description } = props.event;
     // console.log(props);
     return (
         <>
@@ -15,10 +15,7 @@ const Event = (props) => {
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <p className='fw-bold'>$<span className='text-primary'>{cost} </span><span className='text-secondary'>/Per Person</span></p>
-                        <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.
-                        </Card.Text>
+                        <Card.Text>{description.slice(0, 130)}</Card.Text>
                         <ul className="d-flex justify-content-around list-unstyled">
                             <li><FontAwesomeIcon icon={faClock} />
                                 <span className='m-2'>{duration} Days</span></li>
@@ -28,7 +25,7 @@ const Event = (props) => {
                                 <span className='m-2'>{location}</span></li>
                         </ul>
                     </Card.Body>
-                    <NavLink to={`/details/event/${key}`} style={{ "textDecoration": "none" }}>
+                    <NavLink to={`/details/event/${_id}`} style={{ "textDecoration": "none" }}>
                         <button className="p-2 d-block w-100 btn-dark">Check Details for Booking</button>
                     </NavLink>
                 </Card>

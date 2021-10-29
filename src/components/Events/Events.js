@@ -12,7 +12,7 @@ const Events = () => {
             <Row xs={1} md={3} className="g-3">
                 {
                     events?.map(event => <Event
-                        key={event.id}
+                        key={event._id}
                         event={event}
                     ></Event>)
                 }
