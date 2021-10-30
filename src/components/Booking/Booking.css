@@ -5,16 +5,11 @@
   }
   
   .form h3 {
-    font-weight: 100;
+    /* font-weight: 100; */
     color: white;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(79, 98, 148);
-  }
-  
-  .form h5 {
-    color: tomato;
-    padding: 20px;
   }
   
   .form {
@@ -24,11 +19,14 @@
     height: vh-100;
   }
   
-  .form p {
+  .form span {
     color: #bf1650;
   }
+  .form p {
+    color: white;
+  }
   
-  .form p::before {
+  .form span::before {
     display: inline;
     content: "⚠ ";
   }

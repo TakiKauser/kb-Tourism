@@ -50,16 +50,16 @@ const Menubar = () => {
                                     title="Profile"
                                     menuVariant="light"
                                 >
-                                    <NavDropdown.Item href="#action/3.1"><FontAwesomeIcon icon={faCheck} />  My Bookings</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2"><FontAwesomeIcon icon={faTasks} />  Manage Bookings</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3"><FontAwesomeIcon icon={faPlusSquare} />  Add an Event</NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/myBookings" className="login-menu-link"><FontAwesomeIcon icon={faCheck} />  My Bookings</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/manageAllBookings" className="login-menu-link"><FontAwesomeIcon icon={faTasks} />  Manage Bookings</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/addEvent" className="login-menu-link"><FontAwesomeIcon icon={faPlusSquare} />  Add an Event</NavLink></NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item onClick={logOut}><FontAwesomeIcon icon={faSignOutAlt} />  Sign Out</NavDropdown.Item>
                                 </NavDropdown>
                                 // <Button variant='secondary' onClick={logOut}><FontAwesomeIcon icon={faSignOutAlt} />  Sign Out</Button>
                                 :
                                 <Navbar.Text>
-                                    <NavLink to="/login" className="login-menu-link">Sign In</NavLink>
+                                    <NavLink to="/login" className="fw-bold login-menu-link">Sign In</NavLink>
                                 </Navbar.Text>
                         }
                     </Navbar.Collapse>
