@@ -50,7 +50,7 @@ const Menubar = () => {
                                     title="Profile"
                                     menuVariant="light"
                                 >
-                                    <NavDropdown.Item><NavLink to="/myBookings" className="login-menu-link"><FontAwesomeIcon icon={faCheck} />  My Bookings</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to={`/myBookings/${user?.email}`} className="login-menu-link"><FontAwesomeIcon icon={faCheck} />  My Bookings</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink to="/manageAllBookings" className="login-menu-link"><FontAwesomeIcon icon={faTasks} />  Manage Bookings</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink to="/addEvent" className="login-menu-link"><FontAwesomeIcon icon={faPlusSquare} />  Add an Event</NavLink></NavDropdown.Item>
                                     <NavDropdown.Divider />
