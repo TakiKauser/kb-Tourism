@@ -14,7 +14,8 @@ const useMyBookings = () => {
             });
     }, []);
     return {
-        myBookings
+        myBookings,
+        setMyBookings
     }
 };
 
