@@ -37,14 +37,6 @@ const ManageAllBookings = () => {
                         </tbody>
                     ))}
             </Table>
-            {/* <h3>{allBookings.length}</h3>
-            {
-                allBookings.map(singleBooking => <div
-                    key={singleBooking._id}
-                >
-                    <h2>{singleBooking.name}</h2>
-                </div>)
-            } */}
         </div>
     );
 };

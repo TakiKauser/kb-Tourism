@@ -2,9 +2,11 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 import useDetails from '../../hooks/useDetails';
+import { useHistory } from 'react-router-dom';
 import './Booking.css';
 
 const Booking = () => {
+    const history = useHistory();
     const { item } = useDetails();
     const { user } = useAuth();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -22,6 +24,7 @@ const Booking = () => {
                 if (result.insertedId) {
                     alert("Your booking is successful.");
                     reset();
+                    history.push('/');
                 }
             })
         console.log(data);
@@ -32,13 +35,13 @@ const Booking = () => {
         <div className='form'>
             <h3>Booking {item.title}</h3>
             <form onSubmit={handleSubmit(onSubmit)} className="inputs">
-                <input type="text" defaultValue={item.title} placeholder="Event Title" {...register("title", { required: true, maxLength: 80 })} readOnly />
-                {errors.title && <span>Name field is required</span>}
+                {item.title && <input type="text" defaultValue={item.title} placeholder="Event Title" {...register("title", { required: true, maxLength: 80 })} readOnly />}
+                {errors.title && <span>Event Title field is required</span>}
 
                 <input type="text" defaultValue={user.displayName} placeholder="Name" {...register("name", { required: true, maxLength: 80 })} />
                 {errors.name && <span>Name field is required</span>}
 
-                <input type="text" defaultValue={user.email} placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
+                <input type="email" defaultValue={user.email} placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
                 {errors.email && <span>Email field is required</span>}
 
                 <input type="number" placeholder="Contact Number" {...register("contactNumber", { required: true, min: 11 })} />
@@ -47,7 +50,7 @@ const Booking = () => {
                 <input type="number" defaultValue="1" placeholder="Person" {...register("person", { required: true, min: 1 })} />
                 {errors.person && <span>Person field is required</span>}
 
-                <input type="datetime" defaultValue={new Date()} placeholder="Date" {...register("date", { required: true })} readOnly />
+                <input type="date"{...register("date", { required: true })} />
 
                 <input type="submit" value="Book this Event" />
             </form>
