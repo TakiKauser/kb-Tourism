@@ -32,14 +32,21 @@ const Booking = () => {
         <div className='form'>
             <h3>Booking {item.title}</h3>
             <form onSubmit={handleSubmit(onSubmit)} className="inputs">
+                <input type="text" defaultValue={item.title} placeholder="Event Title" {...register("title", { required: true, maxLength: 80 })} readOnly />
+                {errors.title && <span>Name field is required</span>}
+
                 <input type="text" defaultValue={user.displayName} placeholder="Name" {...register("name", { required: true, maxLength: 80 })} />
                 {errors.name && <span>Name field is required</span>}
+
                 <input type="text" defaultValue={user.email} placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
                 {errors.email && <span>Email field is required</span>}
+
                 <input type="number" placeholder="Contact Number" {...register("contactNumber", { required: true, min: 11 })} />
                 {errors.contactNumber && <span>Contact Number field is required</span>}
+
                 <input type="number" defaultValue="1" placeholder="Person" {...register("person", { required: true, min: 1 })} />
                 {errors.person && <span>Person field is required</span>}
+
                 <input type="datetime" defaultValue={new Date()} placeholder="Date" {...register("date", { required: true })} readOnly />
 
                 <input type="submit" value="Book this Event" />
