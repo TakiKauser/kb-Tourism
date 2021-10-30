@@ -9,7 +9,7 @@ const Booking = () => {
     const { user } = useAuth();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch(`http://localhost:5000/event/booking`, {
+        fetch(`https://intense-springs-45537.herokuapp.com/event/booking`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
