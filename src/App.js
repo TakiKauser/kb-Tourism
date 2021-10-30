@@ -9,6 +9,7 @@ import Login from './components/UserAuth/Login/Login';
 import PrivateRoute from './components/UserAuth/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import MybookingPage from './components/Pages/MyBooking/MybookingPage';
+import ManageAllBookingsPage from './components/Pages/ManageAllBookings/ManageAllBookingsPage';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path='/myBookings/:email'>
               <MybookingPage></MybookingPage>
+            </PrivateRoute>
+            <PrivateRoute exact path='/manageAllBookings'>
+              <ManageAllBookingsPage></ManageAllBookingsPage>
             </PrivateRoute>
             <Route exact path='/login'>
               <Login></Login>
