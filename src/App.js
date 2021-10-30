@@ -10,6 +10,7 @@ import PrivateRoute from './components/UserAuth/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import MybookingPage from './components/Pages/MyBooking/MybookingPage';
 import ManageAllBookingsPage from './components/Pages/ManageAllBookings/ManageAllBookingsPage';
+import AddEventPage from './components/Pages/AddEvent/AddEventPage';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path='/manageAllBookings'>
               <ManageAllBookingsPage></ManageAllBookingsPage>
+            </PrivateRoute>
+            <PrivateRoute exact path='/addEvent'>
+              <AddEventPage></AddEventPage>
             </PrivateRoute>
             <Route exact path='/login'>
               <Login></Login>

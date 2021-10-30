@@ -11,11 +11,11 @@ const Event = (props) => {
         <>
             <Col>
                 <Card className='p-2'>
-                    <Card.Img variant="top" src={image} width="100%" height="220" />
+                    <Card.Img variant="top" src={image} width="100%" height="220" alt="event-spot" />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <p className='fw-bold'>$<span className='text-primary'>{cost} </span><span className='text-secondary'>/Per Person</span></p>
-                        <Card.Text>{description.slice(0, 130)}</Card.Text>
+                        <Card.Text>{description?.slice(0, 130)}</Card.Text>
                         <ul className="d-flex justify-content-around list-unstyled">
                             <li><FontAwesomeIcon icon={faClock} />
                                 <span className='m-2'>{duration} Days</span></li>
