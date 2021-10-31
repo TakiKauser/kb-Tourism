@@ -30,7 +30,7 @@ const Mybookings = () => {
     };
     return (
         <div>
-            <h2>{user.displayName}'s Booked Events </h2>
+            <h2 className='my-4'>{user.displayName}'s Booked Events </h2>
 
             <Table className='table table-striped table-dark table-hover'>
                 <thead>

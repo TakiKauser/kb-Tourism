@@ -6,9 +6,9 @@ import './Events.css';
 
 const Events = () => {
     const { events } = useEvents();
-    // console.log(events);
     return (
         <div className='container my-4'>
+            <h2 className='my-5'><span className="text-secondary">kb-tourism's</span> <span className="text-primary">Tour Events</span></h2>
             {
                 events.length === 0 ?
                     <Spinner animation="grow" variant="dark" />

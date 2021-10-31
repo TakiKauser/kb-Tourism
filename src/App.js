@@ -41,7 +41,7 @@ function App() {
             <PrivateRoute exact path='/event/booking/:eventId'>
               <BookingPage></BookingPage>
             </PrivateRoute>
-            <PrivateRoute exact path='/myBookings/:email'>
+            <PrivateRoute exact path='/myBookings'>
               <MybookingPage></MybookingPage>
             </PrivateRoute>
             <PrivateRoute exact path='/manageAllBookings'>

@@ -21,17 +21,13 @@ const Booking = () => {
         })
             .then(response => response.json())
             .then(result => {
-                // console.log(result);
                 if (result.insertedId) {
                     alert("Your booking is successful.");
                     reset();
-                    history.push('/');
+                    history.push('/myBookings');
                 }
             })
-        // console.log(data);
     };
-    // console.log(errors);
-    // console.log(user);
     return (
         <div className='form'>
             <h3>Booking {item.title}</h3>
