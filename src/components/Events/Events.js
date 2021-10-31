@@ -13,7 +13,7 @@ const Events = () => {
                 events.length === 0 ?
                     <Spinner animation="grow" variant="dark" />
                     :
-                    <Row xs={1} md={3} className="g-3">
+                    <Row xs={1} md={3} className="g-4">
                         {
                             events?.map(event => <Event
                                 key={event._id}
