@@ -6,7 +6,7 @@ import { Button, Form } from 'react-bootstrap';
 const Contact = () => {
     return (
         <div className="container p-4">
-            <h2 className='my-4'><span className="text-secondary">Contact</span> <span className="text-primary">kb-tourism</span></h2>
+            <h2 className='my-3'><span className="text-secondary">Contact</span> <span className="text-primary">kb-tourism</span></h2>
             <Form.Group className="mb-3" controlId="email.ControlInput1">
                 <Form.Control type="email" placeholder="xyz@yahoo.com" />
             </Form.Group>
