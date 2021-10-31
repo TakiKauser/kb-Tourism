@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import FAQ from '../FAQ/FAQ';
 import './About.css';
 
 const About = () => {
@@ -39,15 +38,6 @@ const About = () => {
                     <p>Toucan Cafe and Tours is almost like combining two different industries in a very effective, if somewhat unintuitive way. They’re a cafe business based in Medellin, Columbia, and they organize tours for visitors and even language exchanges for passionate foreigners. Their homepage’s menu bar makes learning about this unconventional company a breeze with easily differentiated categories and fundamental information about visiting the country (in addition to what makes their coffee great). Crucially, the site is available in English and Spanish because they know most of their tourists come from English-speaking backgrounds.</p>
                 </div>
             </div >
-            <div className='row'>
-                <div className='col-md-6 mb-5'>
-                    <FAQ></FAQ>
-                </div>
-                <div className='col-md-6 p-5'>
-                    <img src="https://i.ibb.co/12Wj8qW/p-grapher.jpg" alt="capturer" className='img-fluid' />
-                    <h3 className='my-5'>Experince the world with your valuable time.</h3>
-                </div>
-            </div>
         </div>
     );
 };

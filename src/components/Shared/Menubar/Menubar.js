@@ -32,7 +32,7 @@ const Menubar = () => {
                             {/* <NavLink to="/booking" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">Booking</NavLink> */}
                             <NavLink to="/about" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">About</NavLink>
                             <NavLink to="/contact" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">Contact</NavLink>
-                            <NavLink to="/faq" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">FAQ</NavLink>
+                            {/* <NavLink to="/faq" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">FAQ</NavLink> */}
                         </Nav>
                     </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">

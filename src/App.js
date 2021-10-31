@@ -13,7 +13,6 @@ import ManageAllBookingsPage from './components/Pages/ManageAllBookings/ManageAl
 import AddEventPage from './components/Pages/AddEvent/AddEventPage';
 import ContactPage from './components/Pages/Contact/ContactPage';
 import AboutPage from './components/Pages/About/AboutPage';
-import FaqPage from './components/Pages/FAQ/FaqPage';
 
 function App() {
   return (
@@ -35,9 +34,6 @@ function App() {
             </Route>
             <Route exact path='/about'>
               <AboutPage></AboutPage>
-            </Route>
-            <Route exact path='/faq'>
-              <FaqPage></FaqPage>
             </Route>
             <PrivateRoute exact path='/details/event/:eventId'>
               <EventDetails></EventDetails>
