@@ -1,16 +1,16 @@
 import React from 'react';
-import Events from '../../Events/Events';
+import Contact from '../../Contact/Contact';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 
-const EventsPage = () => {
+const ContactPage = () => {
     return (
         <div>
             <Header></Header>
-            <Events></Events>
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );
 };
 
-export default EventsPage;
+export default ContactPage;

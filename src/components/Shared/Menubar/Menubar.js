@@ -29,10 +29,10 @@ const Menubar = () => {
                         <Nav className="mx-auto">
                             <NavLink to="/home" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">Home</NavLink>
                             <NavLink to="/events" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">Events</NavLink>
-                            {/* <NavLink to="/experts" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">Experts</NavLink> */}
                             {/* <NavLink to="/booking" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">Booking</NavLink> */}
                             <NavLink to="/about" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">About</NavLink>
                             <NavLink to="/contact" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">Contact</NavLink>
+                            <NavLink to="/faq" activeStyle={{ fontWeight: 'bold', borderBottom: "2px solid black" }} className="navlink">FAQ</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">

@@ -13,7 +13,8 @@ const useAllBookings = () => {
             })
     }, []);
     return {
-        allBookings
+        allBookings,
+        setAllBookings
     }
 };
 

@@ -37,7 +37,7 @@ const AddEvent = () => {
                 <input type="text" placeholder="Image Link" {...register("image", { required: true, maxLength: 80 })} />
                 {errors.image && <span>Image URL is required</span>}
 
-                <input type="text" placeholder="Description" {...register("description", { required: true, maxLength: 300 })} />
+                <input type="text" placeholder="Description" {...register("description", { required: true })} />
                 {errors.description && <span>Description is required</span>}
 
                 <input type="number" placeholder="Cost (in $)" {...register("cost", { required: true, min: 11 })} />

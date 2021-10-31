@@ -49,7 +49,7 @@ const Footer = () => {
                                         <h1>kb-Tourism</h1>
                                     </div>
                                     <div className="footer-text">
-                                        <p>e-Care is a household name in the nursing service industry in Bangladesh. We provide compassionate nursing services and various types of home care in BD. We have a great team of physiotherapists, nurses, and other professionals.</p>
+                                        <p>Tourism Products are a combination of goods and services demanded by a tourist during travel to and stay at a destination. These include natural, cultural and manmade attractions and facilities such as hotels, transport and ancillary services. The attraction is the core product in a destination.</p>
                                     </div>
                                     <div className="footer-social-icon">
                                         <span>Follow us</span>

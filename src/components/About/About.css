@@ -1,0 +1,12 @@
+.about-container {
+    padding: 50px;
+    /* box-shadow: 15px 15px 15px grey; */
+  }
+  .content {
+    border-left: 1px solid grey;
+    text-align: start;
+  }
+  .deatailed-info{
+      text-align: left;
+      border-top: 3px solid grey;
+  }

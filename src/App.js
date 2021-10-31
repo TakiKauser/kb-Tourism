@@ -11,6 +11,9 @@ import AuthProvider from './contexts/AuthProvider';
 import MybookingPage from './components/Pages/MyBooking/MybookingPage';
 import ManageAllBookingsPage from './components/Pages/ManageAllBookings/ManageAllBookingsPage';
 import AddEventPage from './components/Pages/AddEvent/AddEventPage';
+import ContactPage from './components/Pages/Contact/ContactPage';
+import AboutPage from './components/Pages/About/AboutPage';
+import FaqPage from './components/Pages/FAQ/FaqPage';
 
 function App() {
   return (
@@ -27,6 +30,15 @@ function App() {
             <PrivateRoute exact path='/events'>
               <EventsPage></EventsPage>
             </PrivateRoute>
+            <Route exact path='/contact'>
+              <ContactPage></ContactPage>
+            </Route>
+            <Route exact path='/about'>
+              <AboutPage></AboutPage>
+            </Route>
+            <Route exact path='/faq'>
+              <FaqPage></FaqPage>
+            </Route>
             <PrivateRoute exact path='/details/event/:eventId'>
               <EventDetails></EventDetails>
             </PrivateRoute>
