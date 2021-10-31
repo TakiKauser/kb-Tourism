@@ -19,7 +19,7 @@ const Mybookings = () => {
             })
                 .then(response => response.json())
                 .then(jsonData => {
-                    console.log(jsonData);
+                    // console.log(jsonData);
                     if (jsonData.deletedCount) {
                         alert("Booking Canceled!");
                         const remainingMyBookings = myBookings.filter(booking => booking._id !== id);
@@ -58,9 +58,11 @@ const Mybookings = () => {
                                         <td>{booking?.contactNumber}</td>
                                         <td>{booking?.person}</td>
                                         <td><button onClick={() => handleDeleteBooking(booking?._id)} className="btn btn-danger"><FontAwesomeIcon icon={faTrashAlt} className="text-white" /></button></td>
-                                        <td>
+                                        <td>{(booking?.status === "pending") ?
                                             <button className="btn btn-warning btn-sm"><FontAwesomeIcon icon={faCheck} className="text-white" /> Pending</button>
+                                            :
                                             <button className="btn btn-primary btn-sm"><FontAwesomeIcon icon={faCheckDouble} className="text-white" /> Approved</button>
+                                        }
                                         </td>
                                     </tr>
                                 ))}

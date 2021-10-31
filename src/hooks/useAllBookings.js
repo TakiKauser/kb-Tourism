@@ -8,7 +8,7 @@ const useAllBookings = () => {
         fetch(url)
             .then(response => response.json())
             .then(jsonData => {
-                console.log(jsonData);
+                // console.log(jsonData);
                 setAllBookings(jsonData);
             })
     }, []);

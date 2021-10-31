@@ -16,13 +16,13 @@ const AddEvent = () => {
         })
             .then(response => response.json())
             .then(result => {
-                console.log(result);
+                // console.log(result);
                 if (result.insertedId) {
                     alert("Event is added successfully.");
                     reset();
                 }
             });
-        console.log(data);
+        // console.log(data);
     };
     return (
         <div className='form'>

@@ -11,6 +11,7 @@ const Booking = () => {
     const { user } = useAuth();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
+        data.status = "pending";
         fetch(`https://intense-springs-45537.herokuapp.com/event/booking`, {
             method: "POST",
             headers: {
@@ -20,14 +21,14 @@ const Booking = () => {
         })
             .then(response => response.json())
             .then(result => {
-                console.log(result);
+                // console.log(result);
                 if (result.insertedId) {
                     alert("Your booking is successful.");
                     reset();
                     history.push('/');
                 }
             })
-        console.log(data);
+        // console.log(data);
     };
     // console.log(errors);
     // console.log(user);

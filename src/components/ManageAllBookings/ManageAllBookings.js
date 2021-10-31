@@ -19,7 +19,7 @@ const ManageAllBookings = () => {
             })
                 .then(response => response.json())
                 .then(jsonData => {
-                    console.log(jsonData);
+                    // console.log(jsonData);
                     if (jsonData.deletedCount) {
                         alert("Booking Canceled!");
                         const remainingMyBookings = allBookings.filter(booking => booking._id !== id);
@@ -28,6 +28,26 @@ const ManageAllBookings = () => {
                 });
         }
     };
+    const handleUpdateStatus = (id) => {
+        const url = `https://intense-springs-45537.herokuapp.com/manageAllBookings/${id}`;
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+            .then(response => response.json())
+            .then(jsonData => {
+                // console.log(jsonData);
+                if (jsonData.modifiedCount) {
+                    alert("User information updated successfully.");
+                    // setAllBookings(jsonData);
+                }
+            })
+
+        // e.preventDefault();
+    }
     return (
         <div>
             <h2 className='my-4'>Manage All Bookings as {user?.displayName}</h2>
@@ -58,8 +78,11 @@ const ManageAllBookings = () => {
                                         <td>{booking?.person}</td>
                                         <td><button onClick={() => handleDeleteBooking(booking?._id)} className="btn btn-danger"><FontAwesomeIcon icon={faTrashAlt} className="text-white" /></button></td>
                                         <td>
-                                            <button className="btn btn-warning btn-sm"><FontAwesomeIcon icon={faCheck} className="text-white" /> Pending</button>
-                                            <button className="btn btn-primary btn-sm"><FontAwesomeIcon icon={faCheckDouble} className="text-white" /> Approved</button>
+                                            {(booking?.status === "pending") ?
+                                                <button className="btn btn-warning btn-sm" onClick={() => handleUpdateStatus(booking?._id)}><FontAwesomeIcon icon={faCheck} className="text-white" /> Approve</button>
+                                                :
+                                                <button className="btn btn-primary btn-sm"><FontAwesomeIcon icon={faCheckDouble} className="text-white" /> Approved</button>
+                                            }
                                         </td>
                                     </tr>
                                 ))}
