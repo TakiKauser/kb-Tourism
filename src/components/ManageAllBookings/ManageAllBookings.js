@@ -1,7 +1,7 @@
 import { faCheck, faCheckDouble, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Spinner, Table } from 'react-bootstrap';
 import useAllBookings from '../../hooks/useAllBookings';
 import useAuth from '../../hooks/useAuth';
 
@@ -30,7 +30,7 @@ const ManageAllBookings = () => {
     };
     return (
         <div>
-            <h2>Manage All Bookings as {user?.displayName}</h2>
+            <h2 className='my-4'>Manage All Bookings as {user?.displayName}</h2>
             <Table className='table table-striped table-dark table-hover'>
                 <thead>
                     <tr>
@@ -43,23 +43,28 @@ const ManageAllBookings = () => {
                         <th>Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {
-                        allBookings?.map((booking, index) => (
-                            <tr key={booking?._id}>
-                                <td>{index}</td>
-                                <td>{booking?.name}</td>
-                                <td>{booking?.title}</td>
-                                <td>{booking?.contactNumber}</td>
-                                <td>{booking?.person}</td>
-                                <td><button onClick={() => handleDeleteBooking(booking?._id)} className="btn btn-danger"><FontAwesomeIcon icon={faTrashAlt} className="text-white" /></button></td>
-                                <td>
-                                    <button className="btn btn-warning btn-sm"><FontAwesomeIcon icon={faCheck} className="text-white" /> Pending</button>
-                                    <button className="btn btn-primary btn-sm"><FontAwesomeIcon icon={faCheckDouble} className="text-white" /> Approved</button>
-                                </td>
-                            </tr>
-                        ))}
-                </tbody>
+                {
+                    allBookings.length === 0 ?
+                        <Spinner animation="grow" variant="dark" />
+                        :
+                        <tbody>
+                            {
+                                allBookings?.map((booking, index) => (
+                                    <tr key={booking?._id}>
+                                        <td>{index}</td>
+                                        <td>{booking?.name}</td>
+                                        <td>{booking?.title}</td>
+                                        <td>{booking?.contactNumber}</td>
+                                        <td>{booking?.person}</td>
+                                        <td><button onClick={() => handleDeleteBooking(booking?._id)} className="btn btn-danger"><FontAwesomeIcon icon={faTrashAlt} className="text-white" /></button></td>
+                                        <td>
+                                            <button className="btn btn-warning btn-sm"><FontAwesomeIcon icon={faCheck} className="text-white" /> Pending</button>
+                                            <button className="btn btn-primary btn-sm"><FontAwesomeIcon icon={faCheckDouble} className="text-white" /> Approved</button>
+                                        </td>
+                                    </tr>
+                                ))}
+                        </tbody>
+                }
             </Table>
         </div>
     );
